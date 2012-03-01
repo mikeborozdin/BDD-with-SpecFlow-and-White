@@ -1,0 +1,40 @@
+﻿<Window x:Class="MyApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New Customer" Height="350" Width="700">
+    
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <TextBlock FontSize="24">New Customer</TextBlock>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0">Company Name</TextBlock>
+                <TextBox Name="companyTextBox" Grid.Row="0" Grid.Column="1" Width="200"/>
+                <TextBlock Name="companyError" Grid.Row="0" Grid.Column="2" Foreground="Red"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0">E-mail</TextBlock>
+                <TextBox Name="emailTextBox" Grid.Row="1" Grid.Column="1" Width="200"/>
+
+                <Button Name="saveButton" Grid.Row="2" Grid.Column="1" Click="saveButton_Click">Save</Button>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock FontSize="24">Existing Customers</TextBlock>
+                
+            <ListView Name="customersListView"/>
+        </StackPanel>
+    </StackPanel>
+
+</Window>
